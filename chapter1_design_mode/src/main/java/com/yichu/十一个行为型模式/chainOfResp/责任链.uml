@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="209.0" y="152.0">com.yichu.chainOfResp.ViceGeneralManager</node>
+    <node x="690.0" y="152.0">com.yichu.chainOfResp.GeneralManager</node>
+    <node x="-34.0" y="1.0">com.yichu.chainOfResp.Client</node>
+    <node x="487.0" y="152.0">com.yichu.chainOfResp.Director</node>
+    <node x="0.0" y="152.0">com.yichu.chainOfResp.Manager</node>
+    <node x="0.0" y="275.0">com.yichu.chainOfResp.LeaveRequest</node>
+    <node x="360.25" y="0.0">com.yichu.chainOfResp.Leader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.chainOfResp.ViceGeneralManager" target="com.yichu.chainOfResp.Leader">
+      <point x="0.0" y="-39.0" />
+      <point x="338.0" y="132.0" />
+      <point x="433.75" y="132.0" />
+      <point x="-24.5" y="51.0" />
+    </edge>
+    <edge source="com.yichu.chainOfResp.GeneralManager" target="com.yichu.chainOfResp.Leader">
+      <point x="0.0" y="-39.0" />
+      <point x="807.0" y="122.0" />
+      <point x="531.75" y="122.0" />
+      <point x="73.5" y="51.0" />
+    </edge>
+    <edge source="com.yichu.chainOfResp.Manager" target="com.yichu.chainOfResp.Leader">
+      <point x="0.0" y="-39.0" />
+      <point x="94.5" y="122.0" />
+      <point x="384.75" y="122.0" />
+      <point x="-73.5" y="51.0" />
+    </edge>
+    <edge source="com.yichu.chainOfResp.Director" target="com.yichu.chainOfResp.Leader">
+      <point x="0.0" y="-39.0" />
+      <point x="578.5" y="132.0" />
+      <point x="482.75" y="132.0" />
+      <point x="24.5" y="51.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="462.0" y="249.0" />
+  <SelectedNodes>
+    <node>com.yichu.chainOfResp.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

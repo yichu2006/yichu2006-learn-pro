@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-527.0" y="-68.0">com.yichu.flyweight.Client</node>
+    <node x="-287.0" y="59.0">com.yichu.flyweight.ConcreteChess</node>
+    <node x="-602.0" y="67.0">com.yichu.flyweight.ChessFlyWeightFactory</node>
+    <node x="-282.5" y="-69.0">com.yichu.flyweight.ChessFlyWeight</node>
+    <node x="-287.0" y="206.0">com.yichu.flyweight.Coordinate</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.flyweight.ConcreteChess" target="com.yichu.flyweight.ChessFlyWeight">
+      <point x="0.0" y="-51.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="-36.5" y="188.0" />
+  <SelectedNodes>
+    <node>com.yichu.flyweight.Client</node>
+    <node>com.yichu.flyweight.ChessFlyWeightFactory</node>
+    <node>com.yichu.flyweight.ConcreteChess</node>
+    <node>com.yichu.flyweight.ChessFlyWeight</node>
+    <node>com.yichu.flyweight.Coordinate</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

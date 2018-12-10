@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="150.0" y="251.0">com.yichu.bridge.Brand</node>
+    <node x="0.0" y="355.0">com.yichu.bridge.Dell</node>
+    <node x="213.0" y="128.0">com.yichu.bridge.Laptop2</node>
+    <node x="0.0" y="128.0">com.yichu.bridge.Desktop2</node>
+    <node x="150.0" y="355.0">com.yichu.bridge.Lenovo</node>
+    <node x="300.0" y="355.0">com.yichu.bridge.Shenzhou</node>
+    <node x="-208.0" y="-2.0">com.yichu.bridge.Client</node>
+    <node x="100.0" y="0.0">com.yichu.bridge.Computer2</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.bridge.Laptop2" target="com.yichu.bridge.Computer2">
+      <point x="0.0" y="-39.0" />
+      <point x="305.5" y="103.0" />
+      <point x="251.5" y="103.0" />
+      <point x="50.5" y="39.0" />
+    </edge>
+    <edge source="com.yichu.bridge.Desktop2" target="com.yichu.bridge.Computer2">
+      <point x="0.0" y="-39.0" />
+      <point x="96.5" y="103.0" />
+      <point x="150.5" y="103.0" />
+      <point x="-50.5" y="39.0" />
+    </edge>
+    <edge source="com.yichu.bridge.Shenzhou" target="com.yichu.bridge.Brand">
+      <point x="0.0" y="-27.0" />
+      <point x="365.0" y="330.0" />
+      <point x="258.33333333333337" y="330.0" />
+      <point x="43.33333333333337" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.Lenovo" target="com.yichu.bridge.Brand">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.Dell" target="com.yichu.bridge.Brand">
+      <point x="0.0" y="-27.0" />
+      <point x="65.0" y="330.0" />
+      <point x="171.66666666666666" y="330.0" />
+      <point x="-43.33333333333334" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="262.0" y="160.0" />
+  <SelectedNodes>
+    <node>com.yichu.bridge.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

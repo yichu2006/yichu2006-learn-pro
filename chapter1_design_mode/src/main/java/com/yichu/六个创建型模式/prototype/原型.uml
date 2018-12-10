@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="90.5" y="243.0">com.yichu.prototype.Laptop</node>
+    <node x="-186.0" y="-30.0">com.yichu.prototype.Sheep</node>
+    <node x="48.0" y="347.0">com.yichu.prototype.Client4</node>
+    <node x="-212.0" y="417.0">com.yichu.prototype.Client2</node>
+    <node x="-250.0" y="243.0">com.yichu.prototype.Sheep2</node>
+    <node x="-53.0" y="144.0">com.yichu.prototype.Client3</node>
+    <node x="-250.0" y="144.0">com.yichu.prototype.Client</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="253.0" y="250.5" />
+  <SelectedNodes>
+    <node>com.yichu.prototype.Laptop</node>
+    <node>com.yichu.prototype.Sheep</node>
+    <node>com.yichu.prototype.Client4</node>
+    <node>com.yichu.prototype.Client2</node>
+    <node>com.yichu.prototype.Sheep2</node>
+    <node>com.yichu.prototype.Client3</node>
+    <node>com.yichu.prototype.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

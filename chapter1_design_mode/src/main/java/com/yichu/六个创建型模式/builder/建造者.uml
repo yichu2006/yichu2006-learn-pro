@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="249.0" y="295.0">com.yichu.builder.OrbitalModule</node>
+    <node x="-231.0" y="5.0">com.yichu.builder.Client</node>
+    <node x="0.0" y="0.0">com.yichu.builder.AirShipBuilder</node>
+    <node x="331.5" y="0.0">com.yichu.builder.AirShipDirector</node>
+    <node x="0.0" y="150.0">com.yichu.builder.SxtAirShipBuilder</node>
+    <node x="0.0" y="464.0">com.yichu.builder.EscapeTower</node>
+    <node x="258.0" y="464.0">com.yichu.builder.Engine</node>
+    <node x="286.0" y="104.0">com.yichu.builder.SxtAirshipDirector</node>
+    <node x="0.0" y="295.0">com.yichu.builder.AirShip</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.builder.SxtAirshipDirector" target="com.yichu.builder.AirShipDirector">
+      <point x="0.0" y="-39.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.yichu.builder.SxtAirShipBuilder" target="com.yichu.builder.AirShipBuilder">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="287.0" y="362.5" />
+  <SelectedNodes>
+    <node>com.yichu.builder.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="174.0">com.yichu.memento.Emp</node>
+    <node x="167.0" y="0.0">com.yichu.memento.EmpMemento</node>
+    <node x="203.5" y="395.0">com.yichu.memento.Client</node>
+    <node x="331.0" y="232.5">com.yichu.memento.CareTaker</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="263.0" y="224.5" />
+  <SelectedNodes>
+    <node>com.yichu.memento.Emp</node>
+    <node>com.yichu.memento.CareTaker</node>
+    <node>com.yichu.memento.EmpMemento</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

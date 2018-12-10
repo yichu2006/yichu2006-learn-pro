@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="130.00000000000003" y="0.0">com.yichu.observer.Observer</node>
+    <node x="0.0" y="104.0">com.yichu.observer.Subject</node>
+    <node x="78.00000000000003" y="254.0">com.yichu.observer.ConcreteSubject</node>
+    <node x="320.0" y="115.0">com.yichu.observer.ObserverA</node>
+    <node x="194.83333333333337" y="358.0">com.yichu.observer.Client</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.observer.ConcreteSubject" target="com.yichu.observer.Subject">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="com.yichu.observer.ObserverA" target="com.yichu.observer.Observer">
+      <point x="0.0" y="-39.0" />
+      <point x="425.0" y="79.0" />
+      <point x="288.33333333333337" y="79.0" />
+      <point x="63.33333333333334" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="265.0" y="206.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

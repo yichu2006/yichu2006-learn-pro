@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="273.0" y="127.0">com.yichu.mediator.Market</node>
+    <node x="0.0" y="273.0">com.yichu.mediator.Mediator</node>
+    <node x="290.5" y="0.0">com.yichu.mediator.Department</node>
+    <node x="511.0" y="127.0">com.yichu.mediator.Finacial</node>
+    <node x="0.0" y="127.0">com.yichu.mediator.Development</node>
+    <node x="-180.0" y="14.0">com.yichu.mediator.Client</node>
+    <node x="31.5" y="400.0">com.yichu.mediator.President</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.mediator.Development" target="com.yichu.mediator.Department">
+      <point x="0.0" y="-50.5" />
+      <point x="126.5" y="102.0" />
+      <point x="321.0" y="102.0" />
+      <point x="-61.0" y="38.5" />
+    </edge>
+    <edge source="com.yichu.mediator.Market" target="com.yichu.mediator.Department">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="com.yichu.mediator.President" target="com.yichu.mediator.Mediator">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="com.yichu.mediator.Finacial" target="com.yichu.mediator.Department">
+      <point x="0.0" y="-50.5" />
+      <point x="620.0" y="102.0" />
+      <point x="443.0" y="102.0" />
+      <point x="61.0" y="38.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="364.5" y="288.0" />
+  <SelectedNodes>
+    <node>com.yichu.mediator.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

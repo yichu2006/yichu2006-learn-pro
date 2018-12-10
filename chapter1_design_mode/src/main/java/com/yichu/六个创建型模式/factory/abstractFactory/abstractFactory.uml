@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-138.0" y="285.0">com.yichu.六个创建型模式.factory.abstractFactory.Engine</node>
+    <node x="0.0" y="150.0">com.yichu.六个创建型模式.factory.abstractFactory.LowCarFactory</node>
+    <node x="114.0" y="399.0">com.yichu.六个创建型模式.factory.abstractFactory.LuxuryTyre</node>
+    <node x="198.5" y="295.0">com.yichu.六个创建型模式.factory.abstractFactory.Tyre</node>
+    <node x="-55.0" y="412.0">com.yichu.六个创建型模式.factory.abstractFactory.LuxuryEngine</node>
+    <node x="462.0" y="398.0">com.yichu.六个创建型模式.factory.abstractFactory.LowSeat</node>
+    <node x="256.0" y="150.0">com.yichu.六个创建型模式.factory.abstractFactory.LuxuryCarFactory</node>
+    <node x="-207.0" y="10.0">com.yichu.六个创建型模式.factory.abstractFactory.Client</node>
+    <node x="551.5" y="294.0">com.yichu.六个创建型模式.factory.abstractFactory.Seat</node>
+    <node x="128.0" y="0.0">com.yichu.六个创建型模式.factory.abstractFactory.CarFactory</node>
+    <node x="283.0" y="399.0">com.yichu.六个创建型模式.factory.abstractFactory.LowTyre</node>
+    <node x="-221.0" y="412.0">com.yichu.六个创建型模式.factory.abstractFactory.LowEngine</node>
+    <node x="641.0" y="398.0">com.yichu.六个创建型模式.factory.abstractFactory.LuxurySeat</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LowSeat" target="com.yichu.六个创建型模式.factory.abstractFactory.Seat">
+      <point x="0.0" y="-27.0" />
+      <point x="541.5" y="373.0" />
+      <point x="591.25" y="373.0" />
+      <point x="-39.75" y="27.0" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LowCarFactory" target="com.yichu.六个创建型模式.factory.abstractFactory.CarFactory">
+      <point x="0.0" y="-50.0" />
+      <point x="118.0" y="125.0" />
+      <point x="187.0" y="125.0" />
+      <point x="-59.0" y="50.0" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LuxuryTyre" target="com.yichu.六个创建型模式.factory.abstractFactory.Tyre">
+      <point x="0.0" y="-27.0" />
+      <point x="188.5" y="374.0" />
+      <point x="235.75" y="374.0" />
+      <point x="-37.25" y="27.0" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LuxuryCarFactory" target="com.yichu.六个创建型模式.factory.abstractFactory.CarFactory">
+      <point x="0.0" y="-50.0" />
+      <point x="374.0" y="125.0" />
+      <point x="305.0" y="125.0" />
+      <point x="59.0" y="50.0" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LuxuryEngine" target="com.yichu.六个创建型模式.factory.abstractFactory.Engine">
+      <point x="0.0" y="-38.5" />
+      <point x="18.0" y="387.0" />
+      <point x="-28.5" y="387.0" />
+      <point x="36.5" y="38.5" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LowTyre" target="com.yichu.六个创建型模式.factory.abstractFactory.Tyre">
+      <point x="0.0" y="-27.0" />
+      <point x="357.5" y="374.0" />
+      <point x="310.25" y="374.0" />
+      <point x="37.25" y="27.0" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LowEngine" target="com.yichu.六个创建型模式.factory.abstractFactory.Engine">
+      <point x="0.0" y="-38.5" />
+      <point x="-148.0" y="387.0" />
+      <point x="-101.5" y="387.0" />
+      <point x="-36.5" y="38.5" />
+    </edge>
+    <edge source="com.yichu.六个创建型模式.factory.abstractFactory.LuxurySeat" target="com.yichu.六个创建型模式.factory.abstractFactory.Seat">
+      <point x="0.0" y="-27.0" />
+      <point x="720.5" y="373.0" />
+      <point x="670.75" y="373.0" />
+      <point x="39.75" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="348.0" y="351.0" />
+  <SelectedNodes>
+    <node>com.yichu.六个创建型模式.factory.abstractFactory.LuxuryTyre</node>
+    <node>com.yichu.六个创建型模式.factory.abstractFactory.LowTyre</node>
+    <node>com.yichu.六个创建型模式.factory.abstractFactory.Tyre</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

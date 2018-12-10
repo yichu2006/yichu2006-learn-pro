@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1106.0" y="208.0">com.yichu.bridge.ShenzhouPad</node>
+    <node x="175.0" y="208.0">com.yichu.bridge.DellDesktop</node>
+    <node x="639.0" y="104.0">com.yichu.bridge.Laptop</node>
+    <node x="0.0" y="208.0">com.yichu.bridge.ShenzhouDesktop</node>
+    <node x="1256.0" y="208.0">com.yichu.bridge.DellPad</node>
+    <node x="486.0" y="208.0">com.yichu.bridge.LenovoLaptop</node>
+    <node x="639.0" y="208.0">com.yichu.bridge.DellLaptop</node>
+    <node x="325.0" y="208.0">com.yichu.bridge.LenovoDesktop</node>
+    <node x="1106.0" y="104.0">com.yichu.bridge.Pad</node>
+    <node x="789.0" y="208.0">com.yichu.bridge.ShenzhouLaptop</node>
+    <node x="175.0" y="104.0">com.yichu.bridge.Desktop</node>
+    <node x="956.0" y="208.0">com.yichu.bridge.LenovoPad</node>
+    <node x="639.0" y="0.0">com.yichu.bridge.Computer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yichu.bridge.Laptop" target="com.yichu.bridge.Computer">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.DellPad" target="com.yichu.bridge.Pad">
+      <point x="0.0" y="-27.0" />
+      <point x="1321.0" y="183.0" />
+      <point x="1214.3333333333333" y="183.0" />
+      <point x="43.33333333333326" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.LenovoPad" target="com.yichu.bridge.Pad">
+      <point x="0.0" y="-27.0" />
+      <point x="1021.0" y="183.0" />
+      <point x="1127.6666666666667" y="183.0" />
+      <point x="-43.33333333333326" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.LenovoDesktop" target="com.yichu.bridge.Desktop">
+      <point x="0.0" y="-27.0" />
+      <point x="395.5" y="183.0" />
+      <point x="283.33333333333337" y="183.0" />
+      <point x="43.33333333333337" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.ShenzhouPad" target="com.yichu.bridge.Pad">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.DellDesktop" target="com.yichu.bridge.Desktop">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.DellLaptop" target="com.yichu.bridge.Laptop">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.Pad" target="com.yichu.bridge.Computer">
+      <point x="0.0" y="-27.0" />
+      <point x="1171.0" y="79.0" />
+      <point x="747.3333333333334" y="79.0" />
+      <point x="43.33333333333337" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.Desktop" target="com.yichu.bridge.Computer">
+      <point x="0.0" y="-27.0" />
+      <point x="240.0" y="79.0" />
+      <point x="660.6666666666666" y="79.0" />
+      <point x="-43.33333333333337" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.ShenzhouLaptop" target="com.yichu.bridge.Laptop">
+      <point x="0.0" y="-27.0" />
+      <point x="862.5" y="183.0" />
+      <point x="747.3333333333334" y="183.0" />
+      <point x="43.33333333333337" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.ShenzhouDesktop" target="com.yichu.bridge.Desktop">
+      <point x="0.0" y="-27.0" />
+      <point x="77.5" y="183.0" />
+      <point x="196.66666666666663" y="183.0" />
+      <point x="-43.33333333333334" y="27.0" />
+    </edge>
+    <edge source="com.yichu.bridge.LenovoLaptop" target="com.yichu.bridge.Laptop">
+      <point x="0.0" y="-27.0" />
+      <point x="552.5" y="183.0" />
+      <point x="660.6666666666666" y="183.0" />
+      <point x="-43.33333333333337" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8705547652916074" x="693.0" y="131.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
