@@ -19,6 +19,7 @@
         <module>chapter1_design_mode</module>
         <module>chapter2_redis_lock</module>
         <module>chapter3_futrue_task</module>
+        <module>chapter4_jvm</module>
     </modules>
     <packaging>pom</packaging>
 
