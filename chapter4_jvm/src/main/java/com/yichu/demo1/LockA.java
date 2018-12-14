@@ -1,4 +1,4 @@
-package com.yichu;
+package com.yichu.demo1;
 
 import java.util.Date;
 
