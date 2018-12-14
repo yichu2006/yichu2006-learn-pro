@@ -6,3 +6,4 @@
 - 1.designMode        23种设计模式：装饰模式、策略模式、工厂模式(简单工厂、工厂方法、抽象工厂)、代理模式(静态代理、JDK、Cglib)等
 - 2.Lock              JVM锁、redis分布式锁、Redisson使用
 - 3.FutureTask        多线程
+- 4.用于性能监控demo    jconsole、jvisualvm
