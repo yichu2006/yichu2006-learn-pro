@@ -1,4 +1,4 @@
-package com.yichu.demo1;
+package com.yichu;
 
 
 import org.springframework.boot.SpringApplication;
