@@ -7,3 +7,5 @@
 - 2.Lock              JVM锁、redis分布式锁、Redisson使用
 - 3.FutureTask        多线程
 - 4.用于性能监控demo    jconsole、jvisualvm
+- 5.Lucenen           分词、反向索引、搜索 api使用
+- 6.Lucenen_web       网页版全文检索
