@@ -36,9 +36,11 @@
         <div class="item">
             {{msg}}
             <div class="itemtop" v-for="fileModelList in view">
-
+                <!-- <div>{{fileModelList.title}}</div>
+                 <div class="itemcontent">{{fileModelList.summary}}</div>-->
+                <!--=/images/+{{fileModelList.fileType}}+'.png'"-->
                 <h4>
-                    <!--<img alt="pdf" src=/images/+{{fileModelList.fileType}}+'.png'" class="doclogo">-->
+                    <img alt="pdf" th:src="@{/images/doc.png}" class="doclogo">
                     {{fileModelList.title}}
                 </h4>
                 <h3>
