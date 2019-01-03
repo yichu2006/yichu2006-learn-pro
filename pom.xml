@@ -22,6 +22,7 @@
         <module>chapter4_jvm</module>
         <module>chapter5_lucene</module>
         <module>chapter6_lucene_web</module>
+        <module>chapter7_multi_thread_pro</module>
     </modules>
     <packaging>pom</packaging>
 
