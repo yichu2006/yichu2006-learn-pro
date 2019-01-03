@@ -24,6 +24,7 @@
         <module>chapter6_lucene_web</module>
         <module>chapter7_multi_thread_pro</module>
         <module>chapter8_nio</module>
+        <module>chapter9_websocket</module>
     </modules>
     <packaging>pom</packaging>
 
