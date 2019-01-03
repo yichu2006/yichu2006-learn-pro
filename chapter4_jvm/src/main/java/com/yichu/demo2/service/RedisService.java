@@ -1,7 +1,8 @@
 package com.yichu.demo2.service;
 
 import com.codahale.metrics.annotation.Timed;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 
@@ -14,7 +15,7 @@ import redis.clients.jedis.Jedis;
 @Service
 public class RedisService {
 
-    private final Logger logger = Logger.getLogger(RedisService.class);
+    private final Logger logger = LoggerFactory.getLogger(RedisService.class);
 
     @Timed  //表示该方法加入 metrics 监控： 收集这个方法的调用次数，平均响应时间，最大最小响应时间。。。
     public String queryFromRedis(String key) {

@@ -1,10 +1,9 @@
 package com.yichu.demo2.service;
 
 import com.codahale.metrics.annotation.Timed;
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Random;
 
@@ -17,7 +16,7 @@ import java.util.Random;
 @Service
 public class HttpService {
 
-    private final Logger logger = Logger.getLogger(HttpService.class);
+    private final Logger logger = LoggerFactory.getLogger(HttpService.class);
 
     @Timed  //功能损耗低，计算全在内存，结果输出是异步
     public String queryForRest(String userId) throws InterruptedException {
