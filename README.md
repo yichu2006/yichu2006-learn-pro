@@ -9,3 +9,4 @@
 - 4.用于性能监控demo    demo1:jconsole、jvisualvm  demo2:Metrics 待完成
 - 5.Lucenen           分词、反向索引、搜索 api使用
 - 6.Lucenen_web       网页版全文检索
+- 7.thread            多线程demo
