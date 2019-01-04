@@ -7,7 +7,7 @@ import java.nio.channels.FileChannel;
 public class BufferDemo {
 	public static void main(String[] args) {
 		try {
-			RandomAccessFile file = new RandomAccessFile("E:/dongnao/VIP_v2.0/netty/nio.txt","r");
+			RandomAccessFile file = new RandomAccessFile("E:/netty/nio.txt","r");
 			FileChannel channel = file.getChannel();
 
 			//定义一个Buffer，并且初始化大小
