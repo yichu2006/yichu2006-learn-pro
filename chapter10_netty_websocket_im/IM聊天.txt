@@ -1,0 +1,7 @@
+﻿客户端向服务端发送消息的：
+  登录：[LOGIN][time][Five]
+  登出：[LOGOUT][time][Five]
+  聊天消息：[CHAT][time][Five] - 晚上好！
+
+服务端发给客户端信息：
+  系统消息：[SYSTEM][time][人数] - 艾米加入了聊天室
