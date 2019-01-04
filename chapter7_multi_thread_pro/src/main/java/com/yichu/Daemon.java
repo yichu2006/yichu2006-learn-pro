@@ -6,7 +6,7 @@ import com.yichu.threadstate.SleepUtils;
 /**
  * 创建日期：2017/11/26
  * 创建时间: 12:00
- * 守护线程
+ * 守护线程:  try finally 中的代码不一定执行
  */
 public class Daemon {
     public static void main(String[] args) {

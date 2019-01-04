@@ -76,7 +76,7 @@ public class BlockInterrupt {
     }
 
     public static void main(String[] args) throws InterruptedException {
-       /* WhileTryWhenBlock whileTryWhenBlock = new WhileTryWhenBlock();
+/*        WhileTryWhenBlock whileTryWhenBlock = new WhileTryWhenBlock();
         whileTryWhenBlock.start();
         Thread.sleep(100);
         whileTryWhenBlock.cancel();
