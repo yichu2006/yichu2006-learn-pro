@@ -12,4 +12,6 @@
 - 7.thread            多线程demo
 - 8.NIO               BIO、NIO、AIO、Netty demo
 - 9.websocket         简单聊天demo
-- 10.netty_websocket  群聊
+- 10.netty_websocket  webSocket群聊: 启动 ChatServer 打开多个浏览器访问 http://localhost:8080
+                      socket控制台： 启动 ChatServer 、ChatClient  可以在 ChatClient控制台输入信息
+
