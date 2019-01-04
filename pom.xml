@@ -25,6 +25,7 @@
         <module>chapter7_multi_thread_pro</module>
         <module>chapter8_nio</module>
         <module>chapter9_websocket</module>
+        <module>chapter10_netty_websocket_im</module>
     </modules>
     <packaging>pom</packaging>
 
