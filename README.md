@@ -10,3 +10,6 @@
 - 5.Lucenen           分词、反向索引、搜索 api使用
 - 6.Lucenen_web       网页版全文检索
 - 7.thread            多线程demo
+- 8.NIO               BIO、NIO、AIO、Netty demo
+- 9.websocket         简单聊天demo
+- 10.netty_websocket  群聊
