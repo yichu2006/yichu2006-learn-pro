@@ -47,6 +47,7 @@ public class ChatServer {
 							//这里就不能这样写了，需要和界面交互
 							//arg0.pipeline().addLast(new TimeServerHandler());
 
+							//这里走的就是socket 不是websocket  这3句为了支持 ChatClient
 							arg0.pipeline().addLast(new SFPDecoder());
 							arg0.pipeline().addLast(new SFPEncoder());
 							arg0.pipeline().addLast(new SFPHandler());
