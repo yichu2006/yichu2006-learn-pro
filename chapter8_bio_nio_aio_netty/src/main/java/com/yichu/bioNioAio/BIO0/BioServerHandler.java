@@ -19,11 +19,11 @@ public class BioServerHandler implements Runnable {
 			in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
 			String body = null;
 			while(true){
-				body = in.readLine(); //阻塞等待数据可以被读取
+				body = in.readLine();
 				if(body == null){
 					break;
 				}
-				System.out.println("服务器接收到指令:"+body);
+				System.out.println("xxx:"+body);
 			}
 		} catch (Exception e) {
 			if(in != null){
