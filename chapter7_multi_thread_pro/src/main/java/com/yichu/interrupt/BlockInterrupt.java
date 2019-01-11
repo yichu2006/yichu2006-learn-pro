@@ -38,7 +38,7 @@ public class BlockInterrupt {
         public void cancel() {
             //on = false;
             interrupt();
-            System.out.println("本方法所在线程实例："+getId());
+            System.out.println("本方法所在线程实例："+getId());          //这里的 getId() 和 Thread.currentThread().getId() 区别  要知道 当前 是哪个 线程
             System.out.println("执行本方法的线程："+Thread.currentThread().getId());
             //这句注意，有可能设置的是当前线程，这里就是设置的main主线程的状态。
             //因为cancel方法调用，是在主线程中调用的。
@@ -76,10 +76,12 @@ public class BlockInterrupt {
     }
 
     public static void main(String[] args) throws InterruptedException {
-/*        WhileTryWhenBlock whileTryWhenBlock = new WhileTryWhenBlock();
+        //try catch 在 while里面  和 在 while 外面的 区别
+
+    /*    WhileTryWhenBlock whileTryWhenBlock = new WhileTryWhenBlock();
         whileTryWhenBlock.start();
         Thread.sleep(100);
-        whileTryWhenBlock.cancel();
+        whileTryWhenBlock.cancel();  //这里是main方法所在的主线程调用的
 
         System.out.println("==========================================");*/
 

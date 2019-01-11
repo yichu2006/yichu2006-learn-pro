@@ -1,4 +1,4 @@
-package com.yichu.atomicarray;
+package com.yichu.atomic;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
 

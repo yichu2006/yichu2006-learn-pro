@@ -1,4 +1,4 @@
-package com.yichu.atomicint;
+package com.yichu.atomic;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

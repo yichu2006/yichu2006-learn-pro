@@ -6,19 +6,28 @@ import java.util.Properties;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
-/**
- * ����ѧԺ-Mark��ʦ
- * �������ڣ�2017/11/15
- * ����ʱ��: 17:06
- * �������ݿ����ӣ�����ģʽ
- */
 public class ConnectionDriver {
+
+    public static final Connection getConnectiong(){
+        return new ConnectionImpl();
+    }
 
     private static class ConnectionImpl implements Connection{
 
         @Override
         public Statement createStatement() throws SQLException {
+            System.out.println("创建sql语句： select * from db where threadId="+ Thread.currentThread().getId());
             return null;
+        }
+
+        @Override
+        public void commit() throws SQLException {
+            try {
+                System.out.println(Thread.currentThread().getId() + ":准备提交数据！");
+                TimeUnit.MILLISECONDS.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
@@ -44,15 +53,6 @@ public class ConnectionDriver {
         @Override
         public boolean getAutoCommit() throws SQLException {
             return false;
-        }
-
-        @Override
-        public void commit() throws SQLException {
-            try {
-                TimeUnit.MILLISECONDS.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
 
         @Override
@@ -289,9 +289,5 @@ public class ConnectionDriver {
         public boolean isWrapperFor(Class<?> iface) throws SQLException {
             return false;
         }
-    }
-
-    public static final Connection getConnectiong(){
-        return new ConnectionImpl();
     }
 }

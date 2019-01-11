@@ -22,7 +22,7 @@ public class BlockingQueueWN<T> {
         }
         //将数据入队，可以肯定有出队的线程正在等待
         if (this.queue.size()==0){
-            notifyAll();
+            notifyAll();             //当前方法还没释放锁，是不会执行 出队中的方法的
         }
         this.queue.add(item);
     }

@@ -1,15 +1,16 @@
 package com.yichu;
 
 /**
- * 创建日期：2017/11/28
- * 创建时间: 21:53
+ * desc: 插入的案例： 美女插入，美女又让她亲朋好友插入
  */
 public class JoinTest {
     static class CutInLine implements Runnable{
         private Thread thread;
+
         public CutInLine(Thread thread) {
             this.thread = thread;
         }
+
         @Override
         public void run() {
             try {
@@ -25,9 +26,8 @@ public class JoinTest {
     public static void main(String[] args) {
         Thread previous = Thread.currentThread();
         for(int i=0;i<10;i++){
-            Thread thread =
-                    new Thread(new CutInLine(previous),String.valueOf(i));
-            System.out.println(previous.getId()+" cut in the thread:"+thread.getName());
+            Thread thread = new Thread(new CutInLine(previous),String.valueOf(i));
+            System.out.println(previous.getId()+" 插队在 the thread:"+thread.getName());
             thread.start();
             previous = thread;
         }

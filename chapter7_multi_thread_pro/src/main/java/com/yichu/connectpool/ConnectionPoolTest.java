@@ -4,25 +4,20 @@ import java.sql.Connection;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * ����ѧԺ-Mark��ʦ
- * �������ڣ�2017/11/15
- * ����ʱ��: 17:06
- */
 public class ConnectionPoolTest {
     static ConnectionPool pool  = new ConnectionPool(10);
-    // ��֤����ConnectionRunner�ܹ�ͬʱ��ʼ
+    // 保证所有ConnectionRunner 能够同时开始
     static CountDownLatch start = new CountDownLatch(1);
-    // main�߳̽���ȴ�����ConnectionRunner��������ܼ���ִ��
+    // main线程将会等待所有ConnectionRunner结束后才继续执行
     static CountDownLatch end;
 
     public static void main(String[] args) throws Exception {
-        // �߳������������߳��������й۲�
+        // 线程数量，可以线程数量进行观察
         int threadCount = 50;
         end = new CountDownLatch(threadCount);
-        int count = 20;//ÿ���߳�ѭ��ȡ20��
-        AtomicInteger got = new AtomicInteger();//��ȡ�����ݿ����ӵĴ���
-        AtomicInteger notGot = new AtomicInteger();//û�л�ȡ�����ݿ����ӵĴ���
+        int count = 10;//每个线程循环10次
+        AtomicInteger got = new AtomicInteger();//获取到数据库连接的次数
+        AtomicInteger notGot = new AtomicInteger();//没有获取到数据库连接的次数
         for (int i = 0; i < threadCount; i++) {
             Thread thread = new Thread(new ConnetionRunner(count, got, notGot),
                     "ConnectionRunnerThread");
@@ -55,8 +50,8 @@ public class ConnectionPoolTest {
             }
             while (count > 0) {
                 try {
-                    // ���̳߳��л�ȡ���ӣ����1000ms���޷���ȡ�������᷵��null
-                    // �ֱ�ͳ�����ӻ�ȡ������got��δ��ȡ��������notGot
+                    // 从线程池中获取连接，如果1000ms内无法获取到，将放回null
+                    // 分别统计连接获取的数量got和未获取的数量notGot
                     Connection connection = pool.fetchConnection(1000);
                     if (connection != null) {
                         try {

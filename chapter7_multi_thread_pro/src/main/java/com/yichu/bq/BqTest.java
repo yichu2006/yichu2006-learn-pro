@@ -14,6 +14,7 @@ public class BqTest {
         threadB.setName("Pop");
         threadB.start();
         threadA.start();
+
     }
 
     //推数据入队列
@@ -30,7 +31,7 @@ public class BqTest {
             int i = 20;
             while(i>0){
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(1000);   //这里睡了
                     System.out.println(" i="+i+" will push");
                     bq.enqueue(i--);
                 } catch (InterruptedException e) {

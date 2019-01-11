@@ -25,7 +25,7 @@ public class ConditionTemplete {
     public void waitnotify() throws InterruptedException {
         lock.lock();
         try{
-            condition.signal();
+            condition.signal();   //因为 condition 就已经知道 哪个线程要被唤醒了。
             //condition.signalAll();尽量少使用
         }finally{
             lock.unlock();
