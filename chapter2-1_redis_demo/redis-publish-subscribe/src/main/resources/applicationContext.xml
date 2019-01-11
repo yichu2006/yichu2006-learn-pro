@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:redis="http://www.springframework.org/schema/redis" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+       http://www.springframework.org/schema/redis  
+        http://www.springframework.org/schema/redis/spring-redis-1.0.xsd"
+	default-autowire="byName">
+
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="100" />
+		<property name="maxIdle" value="10" />
+	</bean>
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		destroy-method="destroy">
+		<property name="hostName" value="127.0.0.1" />
+		<property name="port" value="6379" />
+		<property name="database" value="1" />
+		<property name="timeout" value="3000" />
+		<property name="usePool" value="true" />
+		<!--<property name="password" value="12345678" />-->
+		<property name="poolConfig" ref="jedisPoolConfig" />
+	</bean>
+
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="jedisConnectionFactory" />
+		<property name="keySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+
+		<property name="valueSerializer" ref="stringRedisSerializer" />
+		<!--<property name="valueSerializer" ref="stringRedisSerializer" /> 
+		    <property name="hashKeySerializer" ref="stringRedisSerializer" /> 
+			<property name="hashValueSerializer" ref="jackson2JsonRedisSerializer" /> 
+			<property name="connectionFactory" ref="redisConnectionFactory" 
+			/> -->
+
+	</bean>
+	<!-- 对返回值序列化，不然MESSAGE的值前几个字符为乱码 -->
+	<bean id="stringRedisSerializer"
+		class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+
+	<!-- Spring Redis Channel -->
+	<bean id="myMessageListener"
+		class="org.springframework.data.redis.listener.adapter.MessageListenerAdapter">
+		<constructor-arg>
+			<bean class="com.james.cache.services.RedisMessageListener" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="redisContainer"
+		class="org.springframework.data.redis.listener.RedisMessageListenerContainer">
+		<property name="connectionFactory" ref="jedisConnectionFactory" />
+		<property name="messageListeners">
+			<map>
+				<entry key-ref="myMessageListener">
+					<bean class="org.springframework.data.redis.listener.ChannelTopic">
+						<constructor-arg value="user:topic" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>
