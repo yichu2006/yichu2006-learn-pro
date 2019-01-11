@@ -26,6 +26,7 @@
         <module>chapter8_bio_nio_aio_netty</module>
         <module>chapter9_websocket</module>
         <module>chapter10_netty_websocket_im</module>
+        <module>chapter2-1_redis_demo</module>
     </modules>
     <packaging>pom</packaging>
 
