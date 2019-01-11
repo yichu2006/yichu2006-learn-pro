@@ -38,7 +38,7 @@ public class ChatServer {
 					//设置创建的Channel为NioServerSocketChannel类型
 					.channel(NioServerSocketChannel.class)
 					//配置NioServerSocketChannel的TCP参数
-					.option(ChannelOption.SO_BACKLOG, 1024)
+					.option(ChannelOption.SO_BACKLOG, 1024)  //配置TCP参数，握手字符串长度设置
 					//设置绑定IO事件的处理类
 					.childHandler(new ChannelInitializer<SocketChannel>() {
 						//创建NIOSocketChannel成功后，在进行初始化时，将它的ChannelHandler设置到ChannelPipeline中，用于处理网络IO事件
@@ -62,7 +62,7 @@ public class ChatServer {
 							arg0.pipeline().addLast(new HttpHandler());
 
 							//支持WebSocket协议
-							arg0.pipeline().addLast(new WebSocketServerProtocolHandler("/im"));
+							arg0.pipeline().addLast(new WebSocketServerProtocolHandler("/ezfi"));
 							arg0.pipeline().addLast(new WebSocketHandler());
 						}
 					});
