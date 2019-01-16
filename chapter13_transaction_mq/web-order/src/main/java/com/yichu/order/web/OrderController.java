@@ -17,14 +17,8 @@ public class OrderController {
 	OrderService orderService;
 
 	/**
-	 * 创建订单
-	 * 
-	 * @param userId
-	 *            用户编号
-	 * @param orderContent
-	 *            订单内容(购买了什么东西)
-	 * @return
-	 * @throws Exception
+	 * 创建订单  用户编号  订单内容(购买了什么东西)
+	 * 可以通过 单元测试类 来测试
 	 */
 	@RequestMapping("/create")
 	public Object createOrder(String userId, String orderContent) {
