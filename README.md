@@ -15,5 +15,7 @@
 - 9.websocket         简单聊天demo
 - 10.netty_websocket  webSocket群聊: 启动 ChatServer 打开多个浏览器访问 http://localhost:8080
                       socket控制台： 启动 ChatServer 、ChatClient  可以在 ChatClient控制台输入信息
-- 11.
+- 11.task             定时任务 几个简单的 demo   分布式查看 xxl-job
+- 12.jta              XA 分布式事务
+- 13.transaction mq   本地消息表（异步确保）
 
