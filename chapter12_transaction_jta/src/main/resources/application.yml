@@ -1,0 +1,29 @@
+spring:
+  jta:
+    atomikos:
+      datasource:
+        order-datasource:
+          xa-properties:
+            url: jdbc:mysql://localhost:3306/test-order-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+            user: root
+            password: 123456
+          xa-data-source-class-name: com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
+        dispatch-datasource:
+          xa-properties:
+            url: jdbc:mysql://localhost:3306/test-dispatch-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+            user: root
+            password: 123456
+          xa-data-source-class-name: com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
+
+# 普通多数据源
+#mall:
+#  order-datasource:
+#    jdbc-url: jdbc:mysql://localhost:3306/test-order-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.jdbc.Driver
+#  dispatch-datasource:
+#    jdbc-url: jdbc:mysql://localhost:3306/test-dispatch-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.jdbc.Driver
