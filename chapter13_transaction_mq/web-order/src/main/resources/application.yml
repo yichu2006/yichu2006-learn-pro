@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring: 
+  datasource: 
+    url: jdbc:mysql://localhost:3306/test-order-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  rabbitmq:
+    host: 192.168.200.121
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+logging:
+  level:
+    root: warn
