@@ -27,6 +27,9 @@
         <module>chapter9_websocket</module>
         <module>chapter10_netty_websocket_im</module>
         <module>chapter2-1_redis_demo</module>
+        <module>chapter11_task_demo</module>
+        <module>chapter12_transaction_jta</module>
+        <module>chapter13_transaction_mq</module>
     </modules>
     <packaging>pom</packaging>
 
