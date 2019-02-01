@@ -30,6 +30,8 @@
         <module>chapter11_task_demo</module>
         <module>chapter12_transaction_jta</module>
         <module>chapter13_transaction_mq</module>
+        <module>chapter14_transaction_tcc</module>
+        <module>chapter15_zk_lock</module>
     </modules>
     <packaging>pom</packaging>
 
