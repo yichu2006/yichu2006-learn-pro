@@ -4,6 +4,9 @@ import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.redisson.config.Config;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * *
  * Author: WenBin Zhuang
@@ -19,10 +22,10 @@ public class SellTicket implements Runnable {
 //    private Lock lock = new ReentrantLock();
 
     //redis 分布式锁
-//    private Lock lock = new RedisLock();
+    private Lock lock = new RedisLock();
 
     //获取分布式锁
-    RLock lock = getRedissonLock();
+//    RLock lock = getRedissonLock();
 
     private RLock getRedissonLock() {
         Config config = new Config();
@@ -40,6 +43,16 @@ public class SellTicket implements Runnable {
                 if (tickets > 0) {
                     try {
                         Thread.sleep(100);
+
+                        //这段逻辑可以 证明 不可重入
+                        lock.lock();
+                        try{
+                            System.out.println(Thread.currentThread().getName() + "正在出售第" + tickets + "张票");
+                        }finally {
+                            lock.unlock();
+                        }
+
+
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
