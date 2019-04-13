@@ -1,16 +1,14 @@
 package com.yichu.order.service;
 
-import java.util.UUID;
-
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
-import com.alibaba.fastjson.JSONObject;
+import java.util.UUID;
 
 /**
  * 
@@ -23,6 +21,9 @@ public class OrderService {
 
     @Autowired
     OrderDatabaseService orderDatabaseService;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     /**
      * 创建订单
@@ -40,7 +41,6 @@ public class OrderService {
         // 1. 数据库操作
         orderDatabaseService.saveOrder(orderInfo);
         // 2. 发送 分单系统
-        RestTemplate restTemplate = createRestTemplate();
         String httpUrl = "http://127.0.0.1:8080/dispatch-api/dispatch?orderId=" + orderId;
         String result = restTemplate.getForObject(httpUrl, String.class);
         if (!"ok".equals(result)) {
@@ -49,15 +49,5 @@ public class OrderService {
 
         System.out.println("订单创建成功");
 
-    }
-
-    // 创建一个HTTP请求工具类
-    public RestTemplate createRestTemplate() {
-        SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-        // 链接超时时间 > 3秒
-        requestFactory.setConnectTimeout(3000);
-        // 处理超时时间 > 2 秒
-        requestFactory.setReadTimeout(2000);
-        return new RestTemplate(requestFactory);
     }
 }
