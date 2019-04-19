@@ -19,7 +19,7 @@ public class DispatchController {
 
     // 下订单后，添加调度信息
     @GetMapping("/dispatch")
-    public String lock(String orderId) throws Exception {
+    public String dispatch(String orderId) throws Exception {
         Thread.sleep(3000L); // 此处模拟业务耗时，接口调用者会认为超时
         dispatchService.dispatch(orderId); // 将外卖订单分配给送餐小哥
         return "ok";
