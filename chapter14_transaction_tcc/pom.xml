@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>chapter14_transaction_tcc</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>tcc-web-dispatch</module>
+        <module>tcc-web-order</module>
+        <module>tcc-web-api</module>
+    </modules>
 
 
 </project>

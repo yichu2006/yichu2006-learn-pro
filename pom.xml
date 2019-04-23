@@ -17,6 +17,7 @@
 
     <modules>
         <module>chapter1_design_mode</module>
+        <module>chapter2-1_redis_demo</module>
         <module>chapter2_redis_lock</module>
         <module>chapter3_futrue_task</module>
         <module>chapter4_jvm</module>
@@ -26,7 +27,6 @@
         <module>chapter8_bio_nio_aio_netty</module>
         <module>chapter9_websocket</module>
         <module>chapter10_netty_websocket_im</module>
-        <module>chapter2-1_redis_demo</module>
         <module>chapter11_task_demo</module>
         <module>chapter12_transaction_jta</module>
         <module>chapter13_transaction_mq</module>
