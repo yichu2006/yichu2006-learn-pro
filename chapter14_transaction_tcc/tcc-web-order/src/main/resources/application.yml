@@ -1,0 +1,23 @@
+server:
+  port: 18082
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test-order-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+#tcc配置
+tcc:
+  url: jdbc:mysql://localhost:3306/tcc?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+  username: root
+  password: 123456
+  driverclassname: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    root: warn
+
+# remoting   上下文设置，改变访问路径， ServerConfiguration 配置中 Bean 不起名字
+test.service.url: http://localhost:18081/dispatchService
