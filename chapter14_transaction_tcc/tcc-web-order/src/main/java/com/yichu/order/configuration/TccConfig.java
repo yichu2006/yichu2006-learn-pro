@@ -30,8 +30,8 @@ public class TccConfig {
     public TransactionRepository transactionRepository(ObjectSerializer<?> serializer) {
         SpringJdbcTransactionRepository repository = new SpringJdbcTransactionRepository();
         repository.setDataSource(druidDataSource());
-        repository.setDomain("ORDER");     // 对应 实体类 order
-        repository.setTbSuffix("_ORDER");    //对应 tcc 库中的  tcc_transaction_ord
+        repository.setDomain("ORDER");         //领域, 或者也可以称为模块名、应用名, 用于唯一标识一个资源
+        repository.setTbSuffix("_ORDER");      //表后缀, 默认存储表名为 TCC_TRANSACTION ==> tcc_transaction_order
         repository.setSerializer(serializer);
         return repository;
     }

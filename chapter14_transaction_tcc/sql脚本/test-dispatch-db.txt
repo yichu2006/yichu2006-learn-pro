@@ -1,0 +1,10 @@
+-- 创建 调度 数据库
+create database test-dispatch-db;
+use test-dispatch-db;
+CREATE TABLE `table_dispatch` (
+  `dispatch_seq` varchar(255) NOT NULL COMMENT '调度流水号',
+  `order_id` varchar(255) NOT NULL COMMENT '订单编号',
+  `dispatch_status` varchar(255) DEFAULT NULL COMMENT '调度状态',
+  `dispatch_content` varchar(255) DEFAULT NULL COMMENT '调度内容(送餐员，路线)',
+  PRIMARY KEY (`dispatch_seq`,`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='调度信息表';

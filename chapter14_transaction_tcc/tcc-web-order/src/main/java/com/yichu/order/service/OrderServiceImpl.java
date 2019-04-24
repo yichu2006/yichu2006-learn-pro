@@ -1,13 +1,13 @@
 package com.yichu.order.service;
 
-import com.alibaba.fastjson.JSONObject;
 import com.yichu.api.service.DispatchService;
+import com.yichu.order.entity.Order;
+import org.mengyun.tcctransaction.api.Compensable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.UUID;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -25,24 +25,32 @@ public class OrderServiceImpl implements OrderService {
 
     /**
      * 创建订单
-     * 
+     *
      * @throws Exception
      */
-    public void createOrder(String userId, String orderContent) throws Exception {
-        // 订单号生成
-        String orderId = UUID.randomUUID().toString();
-        JSONObject orderInfo = new JSONObject();
-        orderInfo.put("orderId", orderId);
-        orderInfo.put("userId", userId);
-        orderInfo.put("orderContent", orderContent);
+    @Transactional
+    @Compensable(confirmMethod = "confirmOrder", cancelMethod = "cancelOrder", asyncConfirm = true)
+    public void createOrder(Order order) throws Exception {
 
         // 1. 数据库操作   保存订单
-        orderDatabaseService.saveOrder(orderInfo);  //这里面还是有事务的
-
-        // 2. 调用 分单
-        dispatchService.dispatch(orderId);
-
+        orderDatabaseService.saveOrder(order);  //这里面还是有事务的
         System.out.println("订单创建成功");
 
+        // 2. 调用 分单
+        dispatchService.dispatch(null, order.getOrderId());
     }
+
+    public void confirmOrder(Order order) {
+        //手动抛异常
+        int ii = 1/0;
+        System.out.println("订单系统 confirm");
+    }
+
+    public void cancelOrder(Order order) {
+
+        System.out.println("订单系统 cancel");
+        orderDatabaseService.deleteOrder(order);
+    }
+
+
 }

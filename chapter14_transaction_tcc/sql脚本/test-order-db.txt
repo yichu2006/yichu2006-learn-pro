@@ -1,0 +1,12 @@
+-- 创建 订单 数据库
+create database table_order;
+use table_order;
+CREATE TABLE `table_order` (
+  `order_id` varchar(255) NOT NULL COMMENT '订单号',
+  `user_id` varchar(255) NOT NULL COMMENT '用户编号',
+  `order_content` varchar(255) NOT NULL COMMENT '订单内容(买了哪些东西，送货地址)',
+  `status` varchar(255) DEFAULT NULL,
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单信息表';
+

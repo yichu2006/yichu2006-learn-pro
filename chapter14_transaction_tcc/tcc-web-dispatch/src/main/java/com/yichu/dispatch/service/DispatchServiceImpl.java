@@ -1,8 +1,9 @@
 package com.yichu.dispatch.service;
 
-import java.sql.SQLException;
-
 import com.yichu.api.service.DispatchService;
+import org.mengyun.tcctransaction.api.Compensable;
+import org.mengyun.tcctransaction.api.TransactionContext;
+import org.mengyun.tcctransaction.context.MethodTransactionContextEditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -21,15 +22,28 @@ public class DispatchServiceImpl implements DispatchService {
      * 添加调度信息
      */
     @Transactional
-    public void dispatch(String orderId) throws Exception {
+    @Compensable(confirmMethod = "confirmDispatch", cancelMethod = "cancelDispatch", transactionContextEditor = MethodTransactionContextEditor.class)
+    public void dispatch(TransactionContext transactionContext, String orderId) {   //这里不能 throws 异常
 
         System.out.println("服务端代码执行");
 
-        // 往数据库插入一条记录 调度系统数据库事务2
+        //往数据库插入一条调度记录
         String sql = "insert into table_dispatch (dispatch_seq, order_id,dispatch_content) values (UUID(), ?, ?)";
         int update = jdbcTemplate.update(sql, orderId, "派送此订单");
-        if (update != 1) {
-            throw new SQLException("调度数据插入失败，原因[数据库操作]");
-        }
+
+    }
+
+    @Transactional
+    public void confirmDispatch(TransactionContext transactionContext, String orderId) {
+        //手动抛异常
+        int ii = 1/0;
+        System.out.println("调用系统 confirm");
+    }
+
+    @Transactional
+    public void cancelDispatch(TransactionContext transactionContext, String orderId) {
+
+        System.out.println("调用系统 cancle");
+
     }
 }
