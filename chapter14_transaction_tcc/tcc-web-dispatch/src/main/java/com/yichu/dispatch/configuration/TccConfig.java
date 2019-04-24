@@ -41,7 +41,7 @@ public class TccConfig {
      * @return
      */
     @Bean
-    public DefaultRecoverConfig defaultRecoverConfig(){
+    public DefaultRecoverConfig defaultRecoverConfig() {
         DefaultRecoverConfig defaultRecoverConfig=new DefaultRecoverConfig();
         defaultRecoverConfig.setCronExpression("0 */1 * * * ?");
         defaultRecoverConfig.setMaxRetryCount(120);
@@ -49,7 +49,7 @@ public class TccConfig {
         return defaultRecoverConfig;
     }
 
-    public DataSource druidDataSource(){
+    public DataSource druidDataSource() {
         DruidDataSource datasource = new DruidDataSource();
         datasource.setUrl(properties.getUrl());
         datasource.setDriverClassName(properties.getDriverClassName());
