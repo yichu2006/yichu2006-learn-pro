@@ -19,5 +19,5 @@ logging:
   level:
     root: warn
 
-# remoting   上下文设置，改变访问路径， ServerConfiguration 配置中 Bean 不起名字
-test.service.url: http://localhost:18081/dispatchService
+# remoting
+test.service.url: http://localhost:18081/server/dispatchService

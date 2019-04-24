@@ -14,8 +14,8 @@ import org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter;
 @Configuration
 public class ServerConfiguration {
 
-    @Bean("/dispatchService")   //要加
-    public HttpInvokerServiceExporter dispatchService(DispatchService dispatchService) {
+    @Bean("/dispatchService")   // BeanNameUrlHandlerMapping 以“/”开头的Bean进行对外提供服务
+    public HttpInvokerServiceExporter testServer(DispatchService dispatchService) {
         HttpInvokerServiceExporter httpInvokerServiceExporter = new HttpInvokerServiceExporter();
         httpInvokerServiceExporter.setService(dispatchService);
         httpInvokerServiceExporter.setServiceInterface(DispatchService.class);

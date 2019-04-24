@@ -20,7 +20,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     OrderDatabaseService orderDatabaseService;
 
-    @Autowired
+    @Autowired()  //这里按类型装配  @Autowired()@Qualifier("testClient") 也可以通过名称来装配
     DispatchService dispatchService;
 
     /**

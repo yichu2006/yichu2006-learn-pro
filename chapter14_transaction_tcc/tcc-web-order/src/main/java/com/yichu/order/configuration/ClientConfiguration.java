@@ -19,7 +19,7 @@ public class ClientConfiguration {
     private String testServiceUrl;
 
     @Bean
-    public HttpInvokerProxyFactoryBean dispatchService() {
+    public HttpInvokerProxyFactoryBean testClient() {
         HttpInvokerProxyFactoryBean httpInvokerProxyFactoryBean = new HttpInvokerProxyFactoryBean();
         httpInvokerProxyFactoryBean.setServiceUrl(testServiceUrl);
         httpInvokerProxyFactoryBean.setServiceInterface(DispatchService.class);
