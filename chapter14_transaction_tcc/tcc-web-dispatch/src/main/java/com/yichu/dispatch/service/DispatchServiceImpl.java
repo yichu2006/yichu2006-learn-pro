@@ -31,12 +31,14 @@ public class DispatchServiceImpl implements DispatchService {
         String sql = "insert into table_dispatch (dispatch_seq, order_id,dispatch_content) values (UUID(), ?, ?)";
         int update = jdbcTemplate.update(sql, orderId, "派送此订单");
 
+        //手动抛异常   try 阶段 不成功，tcc表不会有事务记录
+        int ii = 1/0;
+
     }
 
     @Transactional
     public void confirmDispatch(TransactionContext transactionContext, String orderId) {
-        //手动抛异常
-        int ii = 1/0;
+
         System.out.println("调用系统 confirm");
     }
 

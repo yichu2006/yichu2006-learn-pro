@@ -7,3 +7,38 @@
 
 3、confirm、cancel中 业务逻辑没有写
 
+4、问题：
+  tcc库中的事务记录有乱码问题；
+  通过查看源码  JdbcTransactionRepository  得知 这2个字段 已 二进制 存储的
+    `GLOBAL_TX_ID` varbinary(32) NOT NULL,
+    `BRANCH_QUALIFIER` varbinary(32) NOT NULL,
+
+5、tcc事务监控页面：还没时间整合进来
+
+6、 try、confirm、cancel 要有 业务支持，目前只是简单写的demo，保存 confirm、cancel 能进去
+
+参考下 tcc 框架  订单、资金、红包 的业务
+
+商城服务业务逻辑：
+下单时：插入订单状态为 "DRAFT" 的订单( Order )记录，
+              并插入购买的商品订单明细( OrderLine )记录。
+支付时：更新订单状态为 "PAYING"。
+订单支付成功：更新订单状态为 "CONFIRMED"。
+订单支付失败：更新订单状体为 "PAY_FAILED"。
+
+
+资金服务：
+CapitalAccount，资金账户余额。
+TradeOrder，交易订单表。
+业务逻辑：
+订单支付支付中，插入交易订单状态为 "DRAFT" 的订单( TradeOrder )记录，并更新减少下单用户的资金账户余额。
+订单支付成功，更新交易订单状态为 "CONFIRM"，并更新增加商店拥有用户的资金账户余额。
+订单支付失败，更新交易订单状态为 "CANCEL"，并更新增加( 恢复 )下单用户的资金账户余额。
+
+红包服务：
+RedPacketAccount，红包账户余额。
+TradeOrder，交易订单表。
+业务逻辑：
+订单支付支付中，插入交易订单状态为 "DRAFT" 的订单( TradeOrder )记录，并更新减少下单用户的红包账户余额。
+订单支付成功，更新交易订单状态为 "CONFIRM"，并更新增加商店拥有用户的红包账户余额。
+订单支付失败，更新交易订单状态为 "CANCEL"，并更新增加( 恢复 )下单用户的红包账户余额。

@@ -41,8 +41,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     public void confirmOrder(Order order) {
-        //手动抛异常
-        int ii = 1/0;
+
         System.out.println("订单系统 confirm");
     }
 
